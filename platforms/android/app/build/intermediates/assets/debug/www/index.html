@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Análise de IP</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css2/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.css" />
+
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="bootstrap/js/modal.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>        
+        <script src="jQuery-Mask-Plugin-master/dist/jquery.mask.min.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+
+        <div class="jumbotron col-md-12">
+            <h1>Análise de IP</h1>
+        </div>
+        <div class="row col-md-12">
+            <label for="idIP">Digite o IP que deseja Verificar</label>
+            <div class="input-group row-fluid col-md-4">
+                <span class="input-group-addon" id="basic-addon3">IP:</span>
+                <input type="text" class="form-control container col-md-3 ip_address" id="ip" placeholder="xxx.xxx.xxx.xxx" aria-describedby="basic-addon3" autofocus >
+                <button  type="button" class="btn btn-default row-fluid col-md-3" id="addIP" onclick="AddTableRow()" data-dismiss="modal">Analisar IP</button>
+
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="row col-md-12">
+                <h2>Dados Coletados</h2>         
+                <table class="table table-striped products-table">
+                    <thead>
+                        <tr>
+                            <th>IP análisado</th>
+                            <th class="data">Data da análise</th>
+                            <th class="myBtn">ver resultado</th>
+                            <th>Excluir ip</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <div class="container row-fluid">
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close " data-dismiss="modal">&times;</button>
+                            <h3 class="modal-title">Resultado da Análise do IP digitado</h3>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table table-striped classe" cellspacing="0" cellpadding="0">
+
+
+                            </table>
+                            <hr/>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+              
+
+
+    </body>
+</html>
